@@ -15,5 +15,5 @@ jobs:
         files: ${{ github.event.issue.url }}
         # Променете проект_id и колоната_id съответно
         project_id: 1
-        column_id: 2
+        column_id: 1
 

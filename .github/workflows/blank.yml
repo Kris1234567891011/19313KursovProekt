@@ -1,0 +1,19 @@
+name: Auto Add to Project
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add_to_project:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Add to Project
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ${{ github.event.issue.url }}
+        # Променете проект_id и колоната_id съответно
+        project_id: 1
+        column_id: 2
+
